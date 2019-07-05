@@ -1,30 +1,12 @@
-const input = document.querySelector('.place');
-const button = document.querySelector('.detect');
+import location from './location';
+import render from './render';
 
-button.addEventListener('click', () => {
-  button.classList.toggle('on');
-  if (button.classList.contains('on')) {
-    input.disabled = true;
-    input.value = '';
-  } else {
-    input.disabled = false;
-    input.focus();
-  }
+new Promise((resolve) => {
+  resolve(location());
+}).then((result) => {
+  const content = document.querySelector('#content');
+  content.innerHTML = `${result.coords.longitude} - ${result.coords.longitude}`;
 });
 
-function initAutocomplete() {
-  const searchBox = new google.maps.places.SearchBox(input);
 
-  searchBox.addListener('places_changed', () => {
-    const places = searchBox.getPlaces();
-
-    if (places.length === 0) {
-      return;
-    }
-
-    console.log(places[0].geometry.location.lat());
-    console.log(places[0].geometry.location.lng());
-  });
-}
-
-initAutocomplete();
+render();
