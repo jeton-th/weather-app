@@ -5,22 +5,19 @@
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
   <meta charset="utf-8" />
   <title>Weather App</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="navbar">
-      <input class="search-bar col-11" class="controls" type="text" placeholder="Search Box" />
-      <i class="material-icons location-icon col-1">
-        location_on
-      </i>
-    </div>
+  <div class="navbar">
+    <input class="search-bar" type="text" placeholder="Search Box" />
+    <i class="material-icons location-icon col-1">
+      location_on
+    </i>
   </div>
 
-  <div id="content" class="container"></div>
+  <div id="content"></div>
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCkNPKa0l9WhS3Nx2kmpI2ZsYYH5GlbiI&libraries=places"
     async defer></script>

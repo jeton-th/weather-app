@@ -1,6 +1,4 @@
 import currentLocation from './currentLocation';
-// import searchLocation from './searchLocation';
-// import initAutocomplete from './initAutocomplete';
 import render from './render';
 
 const searchBar = document.querySelector('.search-bar');
@@ -15,9 +13,9 @@ const weather = (long, lat) => fetch(`http://api.openweathermap.org/data/2.5/wea
 const getCurrent = () => new Promise((resolve) => {
   resolve(currentLocation());
 }).then((result) => {
+  searchBar.value = ''; // clear the search bar
   const long = (result.coords.longitude).toFixed(2);
   const lat = (result.coords.latitude).toFixed(2);
-
   weather(long, lat);
 });
 
