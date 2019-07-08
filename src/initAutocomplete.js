@@ -1,5 +1,6 @@
-const initAutocomplete = () => {
+const initAutocomplete = (searchBar) => {
   const searchBox = new google.maps.places.SearchBox(searchBar);
+  let a;
 
   searchBox.addListener('places_changed', () => {
     const places = searchBox.getPlaces();
@@ -8,9 +9,10 @@ const initAutocomplete = () => {
       return;
     }
 
-    return places[0].geometry.location;
-    // places[0].geometry.location.lng(),
+    a = places[0].geometry.location.lng();
   });
+
+  return a;
 };
 
 export { initAutocomplete as default };
