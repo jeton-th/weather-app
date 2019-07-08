@@ -38,4 +38,6 @@ function initAutocomplete() {
   });
 }
 
-initAutocomplete();
+searchBar.addEventListener('focus', () => {
+  initAutocomplete();
+});
