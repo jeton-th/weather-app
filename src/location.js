@@ -1,5 +1,5 @@
 import currentLocation from './currentLocation';
-import initAutocomplete from './initAutocomplete';
+// import initAutocomplete from './initAutocomplete';
 
 const location = () => {
   // const searchBar = document.querySelector('.search-bar');
@@ -17,7 +17,6 @@ const location = () => {
   //   searchBar.focus();
   //   return initAutocomplete();
   // });
-
   return currentLocation();
 };
 

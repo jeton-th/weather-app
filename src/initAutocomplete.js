@@ -8,7 +8,7 @@ const initAutocomplete = () => {
       return;
     }
 
-    return places[0].geometry.location.lat();
+    return places[0].geometry.location;
     // places[0].geometry.location.lng(),
   });
 };
