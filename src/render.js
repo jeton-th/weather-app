@@ -1,3 +1,5 @@
+import { convertTemperature } from './utils';
+
 const render = (data) => {
   const content = document.querySelector('#content');
 
@@ -5,16 +7,7 @@ const render = (data) => {
     content.removeChild(content.firstChild);
   }
 
-  const tempereature = (data.main.temp).toFixed(0);
   const iconCode = data.weather[0].icon;
-
-  content.classList.add(
-    'w-50',
-    'mx-auto',
-    'my-5',
-    'text-center',
-  );
-
   if (iconCode[2] === 'n') {
     document.body.classList.add('dark');
   } else {
@@ -25,23 +18,36 @@ const render = (data) => {
   place.innerHTML = data.name;
   content.appendChild(place);
 
-  const row = document.createElement('div');
-  row.style = 'display: flex; justify-content: space-evenly;';
-  content.appendChild(row);
+  const dateElement = document.createElement('small');
+  const date = new Date();
+  dateElement.innerHTML = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+  content.appendChild(dateElement);
+
+  const div = document.createElement('div');
+  div.classList.add('row');
+  content.appendChild(div);
 
   const icon = document.createElement('img');
   icon.setAttribute('src', `http://openweathermap.org/img/wn/${iconCode}@2x.png`);
-  row.appendChild(icon);
+  icon.setAttribute('alt', data.weather[0].description);
+  div.appendChild(icon);
 
   const span = document.createElement('span');
-  span.innerHTML = `${tempereature}&deg;`;
-  span.style = 'font-size: 48px; line-height: 100px;';
-  row.appendChild(span);
+  span.classList.add('temperature');
+  span.innerHTML = (data.main.temp).toFixed(0);
+  span.style = 'font-size: 48px;';
+  div.appendChild(span);
 
-  const p = document.createElement('p');
-  p.innerHTML = data.weather[0].description;
-  p.style.textTransform = 'capitalize';
-  content.appendChild(p);
+  const desc = document.createElement('span');
+  desc.innerHTML = data.weather[0].description;
+  desc.style.textTransform = 'capitalize';
+  content.appendChild(desc);
 };
 
-export { render as default };
+const changeTemperature = () => {
+  const temperature = document.querySelector('.temperature');
+  const newTemperature = convertTemperature(temperature.innerHTML);
+  temperature.innerHTML = newTemperature;
+};
+
+export { render, changeTemperature };
