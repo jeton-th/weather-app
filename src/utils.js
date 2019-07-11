@@ -8,7 +8,7 @@ const getUnit = () => {
 const changeUnit = () => {
   const unit = JSON.parse(localStorage.getItem('unit'));
   if (unit.name === 'metric') {
-    localStorage.setItem('unit', JSON.stringify({ name: 'imperial', sign: '&deg;R' }));
+    localStorage.setItem('unit', JSON.stringify({ name: 'imperial', sign: '&deg;F' }));
   } else {
     localStorage.setItem('unit', JSON.stringify({ name: 'metric', sign: '&deg;C' }));
   }

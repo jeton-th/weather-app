@@ -2,8 +2,8 @@ body {
     font-family: sans-serif;
     font-size: 18px;
     transition: 1s;
-    background: lightblue;
-    color: darkslateblue;
+    background: skyblue;
+    color: midnightblue;
 }
 
 .navbar {
@@ -19,13 +19,13 @@ body {
     padding: 5px 10px 1px 10px;
     font-size: 16px;
     background: transparent;
-    color: darkslateblue;
+    color: midnightblue;
     border: none;
-    border-bottom: 2px solid darkslateblue;
+    border-bottom: 2px solid midnightblue;
 }
 
 .search-bar::placeholder {
-    color: darkslateblue;
+    color: midnightblue;
     opacity: 0.6;
 }
 
@@ -59,7 +59,7 @@ h1{
     padding-top: 10px;
     font-size: 20px;
     font-weight: bold;
-    color: darkslateblue;
+    color: midnightblue;
     background: transparent;
     cursor: pointer;
     border: none;
@@ -71,7 +71,7 @@ h1{
 }
 
 .dark {
-    background: darkslateblue;
+    background: midnightblue;
     color: white;
 }
 

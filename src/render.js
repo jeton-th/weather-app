@@ -1,4 +1,5 @@
 import { convertTemperature } from './utils';
+const moment = require('moment');
 
 const render = (data) => {
   const content = document.querySelector('#content');
@@ -19,8 +20,7 @@ const render = (data) => {
   content.appendChild(place);
 
   const dateElement = document.createElement('small');
-  const date = new Date();
-  dateElement.innerHTML = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+  dateElement.innerHTML = moment().format('MMMM Do YYYY');
   content.appendChild(dateElement);
 
   const div = document.createElement('div');
