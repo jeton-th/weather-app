@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta charset="utf-8" />
+  <title>Weather App</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <i class="material-icons location-icon col-1">
+      location_on
+    </i>
+    <input class="search-bar col" type="text" placeholder="Search place ..." />
+    <button class="unit col-1"></button>
+  </div>
+
+  <div id="content"></div>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCkNPKa0l9WhS3Nx2kmpI2ZsYYH5GlbiI&libraries=places"
+    async defer></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
