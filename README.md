@@ -1,6 +1,6 @@
 # Weather App
 
-This is a weather web application in JavaScript. The purpose of this project is to practise JavaScript Promises and APIs.
+This is a weather web application in JavaScript. The purpose of this project is to practice JavaScript Promises and APIs.
 
 ### Contributors:
 * [Jeton Thaçi](https://github.com/jeton-th)
