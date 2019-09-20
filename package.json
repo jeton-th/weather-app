@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "development": "webpack --watch"
+    "development": "webpack --watch",
+    "start:dev": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +22,8 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-utils": ">=1.4.1",
     "webpack": "^4.36.1",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.1"
   },
   "dependencies": {
     "moment": "^2.24.0"
