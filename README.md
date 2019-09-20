@@ -1,5 +1,7 @@
 # Weather App
 
+![GitHub Logo](weather-app.png)
+
 ## Summary
 
 This is a weather web application in JavaScript. It shows the current weather for the current location. 
