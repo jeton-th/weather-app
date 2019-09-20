@@ -1,6 +1,6 @@
 # Weather App
 
-![GitHub Logo](weather-app.png)
+![Weather app screenshot](weather-app.png)
 
 ## Summary
 
@@ -8,6 +8,7 @@ This is a weather web application in JavaScript. It shows the current weather fo
 You can change the location by searching it in the top bar. The temperature can be converted to Celsius or Fahrenheit.
 
 You can check out the [live demo](https://jeton-th.github.io/weather-app/).
+
 ## Getting Started
 
 Follow these instructions to get a copy of the project up and running on your
